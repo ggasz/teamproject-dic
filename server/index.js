@@ -36,6 +36,6 @@ app.use( (err, req, res, next) => { // 서버 내부 오류 처리
     console.error(err.stack)
     res.status(500).send("something is broken on server !")
 })
-app.listen(5000, () => { // 5000 포트로 서버 오픈
+app.listen(process.env.PORT || 5000, () => { // 5000 포트로 서버 오픈
     console.log('server is running on port 5000 ...')
 })
